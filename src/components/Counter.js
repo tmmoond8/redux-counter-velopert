@@ -22,17 +22,17 @@ const Counter = ({number, color, onIncrement, onDecrement, onSetColor}) => {
 Counter.propTypes = {
   number: PropTypes.number,
   color: PropTypes.string,
-  onIncrement: PropTypes.func,
-  onDecrement: PropTypes.func,
-  onSetColor: PropTypes.func
+	onIncrement: PropTypes.func,
+	onDecrement: PropTypes.func,
+	onSetColor: PropTypes.func
 };
 
 Counter.defaultProps = {
   number: 0,
   color: 'black',
-  onIncrement: () => console.wern('onIncrement not defined'),
-  onDecrement: () => console.wern('onDecrement not defined'),
-  onSetColor: () => console.wern('onSetColor not defined')
+	onIncrement: () => console.warn('onIncrement not defined'),
+	onDecrement: () => console.warn('onDecrement not defined'),
+	onSetColor: () => console.warn('onSetColor not defined')
 }
 
 export default Counter;
