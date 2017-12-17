@@ -1,5 +1,5 @@
 import CounterList from '../components/CounterList';
-import * as actions from '../actions/index';
+import * as actions from '../modules/index';
 import { connect  } from 'react-redux';
 import { getRandomColor } from '../utils';
 
@@ -11,7 +11,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
 	onIncrement: (index) => dispatch(actions.increment(index)),
 	onDecrement: (index) => dispatch(actions.decrement(index)),
-	onSetColor: (index) => dispatch(actions.setColor(index, getRandomColor()))
+	onSetColor: (index) => dispatch(actions.setColor({index: index, color: getRandomColor()}))
 });
 
 const CounterListContainer = connect(mapStateToProps, mapDispatchToProps)(CounterList);
